@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work | Jane Samy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f4f6f9;
+      color: #24292e;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: #1b2b4b;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    nav .logo { color: #fff; font-size: 1.1rem; font-weight: 700; }
+    nav ul { list-style: none; display: flex; gap: 1.8rem; }
+    nav ul a { color: #c8d1da; text-decoration: none; font-size: 0.95rem; }
+    nav ul a:hover { color: #fff; }
+    nav ul a.active { color: #2ea44f; font-weight: 600; }
+
+    /* ── Page Header ── */
+    .page-header {
+      background: linear-gradient(135deg, #1b2b4b 0%, #0366d6 100%);
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 1rem 3rem;
+    }
+    .page-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .page-header p  { color: #a0c4f8; font-size: 1rem; }
+
+    /* ── Section ── */
+    .section { max-width: 960px; margin: 0 auto; padding: 3rem 1.5rem; }
+    h2.section-title {
+      font-size: 1.4rem; color: #1b2b4b;
+      margin-bottom: 0.4rem;
+      border-left: 4px solid #2ea44f;
+      padding-left: 0.75rem;
+    }
+    .section-sub { color: #586069; margin-bottom: 2rem; font-size: 0.93rem; }
+
+    /* ── Project Cards ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.4rem;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e1e4e8;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .project-card:hover { box-shadow: 0 6px 20px rgba(3,102,214,0.13); }
+    .card-banner {
+      height: 8px;
+      background: #2ea44f;
+    }
+    .card-body { padding: 1.4rem 1.5rem; }
+    .card-tag {
+      display: inline-block;
+      background: #d4f0dc;
+      color: #1a6535;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 12px;
+      margin-bottom: 0.7rem;
+    }
+    .card-tag.blue  { background: #dbeafe; color: #1e40af; }
+    .card-tag.purple { background: #ede9fe; color: #5b21b6; }
+    .card-tag.orange { background: #ffedd5; color: #9a3412; }
+    .card-body h3 { font-size: 1.05rem; color: #1b2b4b; margin-bottom: 0.5rem; }
+    .card-body p  { font-size: 0.9rem; color: #586069; line-height: 1.6; margin-bottom: 1rem; }
+    .card-meta { font-size: 0.82rem; color: #8b949e; }
+
+    /* ── Skills strip ── */
+    .skills-strip {
+      background: #1b2b4b;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+    .skills-strip h2 { color: #fff; font-size: 1.3rem; margin-bottom: 0.4rem; }
+    .skills-strip p  { color: #a0adb8; font-size: 0.92rem; margin-bottom: 1.6rem; }
+    .skills-wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem; max-width: 700px; margin: 0 auto; }
+    .skill-pill {
+      background: rgba(255,255,255,0.1);
+      color: #c8d1da;
+      padding: 0.4rem 1.1rem;
+      border-radius: 20px;
+      font-size: 0.88rem;
+    }
+
+    /* ── Highlight banner ── */
+    .highlight {
+      background: #fff;
+      border-left: 5px solid #2ea44f;
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .highlight h3 { color: #1b2b4b; margin-bottom: 0.4rem; font-size: 1rem; }
+    .highlight p  { color: #586069; font-size: 0.92rem; line-height: 1.6; }
+
+    /* ── Footer ── */
+    footer {
+      background: #24292e; color: #586069;
+      text-align: center; padding: 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 640px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <span class="logo">Jane Samy</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <div class="page-header">
+    <h1>📁 My Work</h1>
+    <p>Projects, programmes, and resources I've built for sales enablement.</p>
+  </div>
+
+  <!-- Projects -->
+  <div class="section">
+
+    <div class="highlight">
+      <h3>🌏 Scope</h3>
+      <p>I work across the Asia Pacific region, designing enablement programmes, coaching frameworks, and training resources that help SDR teams at LinkedIn perform at their best.</p>
+    </div>
+
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-sub">A selection of work across training, coaching, and enablement.</p>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="card-banner" style="background:#2ea44f;"></div>
+        <div class="card-body">
+          <span class="card-tag">Training</span>
+          <h3>SDR Onboarding Programme</h3>
+          <p>Designed a structured 30-60-90 day onboarding journey for new SDRs across APAC, covering product knowledge, outreach skills, and pipeline management.</p>
+          <div class="card-meta">📍 APAC Region &nbsp;·&nbsp; 2025</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-banner" style="background:#0366d6;"></div>
+        <div class="card-body">
+          <span class="card-tag blue">Coaching</span>
+          <h3>Call Coaching Framework</h3>
+          <p>Built a repeatable call coaching scorecard and feedback loop used by managers to coach SDRs on cold calls, discovery calls, and objection handling.</p>
+          <div class="card-meta">📍 LinkedIn Singapore &nbsp;·&nbsp; 2025</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-banner" style="background:#7c3aed;"></div>
+        <div class="card-body">
+          <span class="card-tag purple">Playbook</span>
+          <h3>Outreach Messaging Playbook</h3>
+          <p>Created a library of outreach templates, LinkedIn message sequences, and email cadences tailored for different buyer personas in the APAC market.</p>
+          <div class="card-meta">📍 APAC Region &nbsp;·&nbsp; 2024</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-banner" style="background:#ea580c;"></div>
+        <div class="card-body">
+          <span class="card-tag orange">Workshop</span>
+          <h3>Objection Handling Workshop</h3>
+          <p>Facilitated live roleplay workshops helping SDRs practise and respond to the most common objections, using Hyperbound simulations for realistic practice.</p>
+          <div class="card-meta">📍 Singapore &nbsp;·&nbsp; 2024</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-banner" style="background:#0891b2;"></div>
+        <div class="card-body">
+          <span class="card-tag blue">Resource</span>
+          <h3>LinkedIn Jargon Glossary</h3>
+          <p>Developed a plain-language glossary of LinkedIn sales terminology to help new hires get up to speed quickly with internal language and product concepts.</p>
+          <div class="card-meta">📍 LinkedIn APAC &nbsp;·&nbsp; 2024</div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="card-banner" style="background:#2ea44f;"></div>
+        <div class="card-body">
+          <span class="card-tag">Guide</span>
+          <h3>This Website!</h3>
+          <p>Built and published this mini website using GitHub Pages — part of an initiative to share enablement resources online with the wider team.</p>
+          <div class="card-meta">📍 github.io &nbsp;·&nbsp; 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="skills-strip">
+    <h2>Skills & Tools</h2>
+    <p>What I use day-to-day in my enablement work.</p>
+    <div class="skills-wrap">
+      <span class="skill-pill">Sales Enablement</span>
+      <span class="skill-pill">SDR Coaching</span>
+      <span class="skill-pill">Curriculum Design</span>
+      <span class="skill-pill">LinkedIn Sales Navigator</span>
+      <span class="skill-pill">Hyperbound</span>
+      <span class="skill-pill">Cold Calling</span>
+      <span class="skill-pill">Discovery Calls</span>
+      <span class="skill-pill">Objection Handling</span>
+      <span class="skill-pill">Outreach Sequencing</span>
+      <span class="skill-pill">Microsoft 365</span>
+      <span class="skill-pill">GitHub Pages</span>
+      <span class="skill-pill">APAC Markets</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Jane Samy · Built with GitHub Pages · Singapore</p>
+  </footer>
+
+</body>
+</html>
